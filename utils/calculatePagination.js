@@ -1,4 +1,4 @@
-export default function calculatePagination(totalPages, activePage, pageNeighbours = 1) {
+export default function calculatePagination(totalPages, activePage, pageNeighbours = 1, ellipsis = '...') {
   if (!Number.isInteger(pageNeighbours) || pageNeighbours < 1 ) {
     pageNeighbours = 1;
   }
@@ -33,11 +33,11 @@ export default function calculatePagination(totalPages, activePage, pageNeighbou
   //The second entry should be either 2 or ellipsis(...)
   if (range[0] !== 1) {
     range[0] = 1;
-    range[1] = '...';
+    range[1] = ellipsis;
   }
   //Allow user to go the last page, second last entry should be second last page or ellipsis
   if (range[range.length-1] !== totalPages) {
-    range[range.length - 2] = '...';
+    range[range.length - 2] = ellipsis;
     range[range.length - 1] = totalPages;
   }
 
