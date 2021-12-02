@@ -1,5 +1,5 @@
 {
-  "name": "js-utils",
+  "name": "@wunderwa/js-utils",
   "version": "1.0.0",
   "description": "Javascript utils",
   "main": "index.js",
